@@ -22,7 +22,7 @@ jobs:
       run: npm install
     -
       name: Run script
-      run: node index.js --restaurants={{ secrets.RESTAURANTS }} --city={{ secrets.CITY }}
+      run: node index.js --restaurants=${{ secrets.RESTAURANTS }} --city=${{ secrets.CITY }}
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       continue-on-error: true
