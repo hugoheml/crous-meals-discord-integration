@@ -40,7 +40,7 @@ const currentDate = new Date();
 
 try {
   const restaurants = await crous.restaurants(city);
-  for await (const identifier of ids) {
+  for (const identifier of ids) {
     const restaurant = restaurants.find((restaurant) => restaurant.id === identifier);
     if (!restaurant) {
       throw new Error(`Restaurant with id ${identifier} not found`);
