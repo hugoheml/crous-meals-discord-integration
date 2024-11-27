@@ -13,7 +13,8 @@ try {
     console.log(restaurant.title);
     console.log("Address:", restaurant.address);
     console.log("Id:", restaurant.id);
+    console.dir(crous.meals(restaurant, new Date()), { depth: Infinity });
   }
 } catch (e) {
-  console.log(`No restaurants found for ${identifier}`);
+  throw new Error(`No restaurants found for ${identifier}`);
 }
