@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "crowous": "^1.3.0"
+  }
+}
