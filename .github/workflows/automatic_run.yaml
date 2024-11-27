@@ -19,7 +19,7 @@ jobs:
         node-version: '23.x'
     - 
       name: Install dependencies
-      run: npm Install
+      run: npm install
     -
       name: Run script
       run: node index.js --restaurants={{ secrets.RESTAURANTS }} --city={{ secrets.CITY }}
