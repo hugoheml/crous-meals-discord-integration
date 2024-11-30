@@ -77,6 +77,10 @@ for (const { restaurant, meals } of mealsList) {
         inline: true
       })
     }
+    if (embed.data.fields.length == 0) { 
+      console.log(`No meals found for ${restaurant.name}`);
+      continue; 
+    }
 
     embed.setColor('#d02e26')
     embed.setFooter({ text: "Powered by Crowous npm package" });
