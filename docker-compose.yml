@@ -1,0 +1,5 @@
+services:
+  crous-meals-discord-in:
+    image: ghcr.io/hugoheml/crous-meals-discord-in:v1.0.1
+    environment:
+      DISCORD_WEBHOOK_URL: <DISCORD_WEBHOOK_URL>

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hugoheml/crous-meals-discord-integration/issues"
   },
-  "homepage": "https://github.com/hugoheml/crous-meals-discord-integration#readme"
+  "homepage": "https://github.com/hugoheml/crous-meals-discord-integration#readme",
+  "scripts": {
+    "start": "node index.js"
+  }
 }
