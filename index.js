@@ -11,9 +11,9 @@ const city = args.city;
 const ids = args.restaurants?.split(",")?.map((identifier) => parseInt(identifier, 10));
 
 const momentsTranslations = {
-  [crous.Moment.LUNCH]: "midi",
-  [crous.Moment.DINNER]: "soir",
-  [crous.Moment.EVENING]: "matin",
+  [crous.Moment.Lunch]: "midi",
+  [crous.Moment.Evening]: "soir",
+  [crous.Moment.Morning]: "matin",
 }
 
 if (!city) {
@@ -39,14 +39,14 @@ const mealsList = [];
 const currentDate = new Date();
 
 try {
-  const restaurants = await crous.restaurants(city);
+  const restaurants = await crous.getRestaurantsFrom(city);
   for (const identifier of ids) {
     const restaurant = restaurants.find((restaurant) => restaurant.id === identifier);
     if (!restaurant) {
       throw new Error(`Restaurant with id ${identifier} not found`);
     }
 
-    const meals = crous.meals(restaurant, currentDate);
+    const meals = restaurant.getMeals(currentDate);
     mealsList.push({ restaurant, meals });
   }
 } catch (e) {

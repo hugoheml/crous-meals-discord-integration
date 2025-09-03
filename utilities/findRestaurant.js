@@ -7,7 +7,7 @@ if (!identifier) {
 }
 
 try {
-  const restaurants = await crous.restaurants(identifier);
+  const restaurants = await crous.getRestaurantsFrom(identifier);
    
   for (const restaurant of restaurants) {
     console.log(restaurant.title);
