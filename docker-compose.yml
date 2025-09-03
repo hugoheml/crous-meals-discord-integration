@@ -1,5 +1,6 @@
 services:
-  crous-meals-discord-in:
-    image: ghcr.io/hugoheml/crous-meals-discord-in:v1.0.1
+  crous-meals-discord-integration:
+    image: ghcr.io/hugoheml/crous-meals-discord-integration:v1.1.0
+    command: ["npm", "run", "start", "--", "--city=<CITY_NAME>", "--restaurants=<RESTAURANT_ID>"]
     environment:
       DISCORD_WEBHOOK_URL: <DISCORD_WEBHOOK_URL>
